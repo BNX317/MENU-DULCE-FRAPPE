@@ -1,4 +1,7 @@
 *{
+    -webkit-tap-highlight-color: transparent;
+}
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -54,6 +57,9 @@ section{
 
 section h2{
     margin-bottom:15px;
+    color:#4a4a4a;
+    font-size:28px;
+    text-align:center;
 }
 
 .producto{
@@ -239,4 +245,95 @@ summary::after{
 
 details[open] summary::after{
     transform:rotate(180deg);
+}
+.producto{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-4px);
+}
+section{
+    padding:30px 20px;
+    margin-bottom:20px;
+}
+.categorias a{
+    transition:.3s;
+}
+
+.categorias a:hover{
+    background:#ffd6e7;
+    transform:scale(1.05);
+}
+.precios{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.precios span{
+    color:#ff5ca8;
+    font-weight:bold;
+    font-size:22px;
+}
+.separador{
+    border:none;
+    height:2px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        #ffd6e7,
+        #cfefff,
+        transparent
+    );
+
+    margin-top:30px;
+}
+#volverArriba{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#ffd6e7;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+html{
+    scroll-behavior:smooth;
+}
+.bienvenida{
+    text-align:center;
+    margin-top:10px;
+}
+
+.bienvenida h2{
+    color:#ff5ca8;
+    margin-bottom:8px;
+}
+
+.bienvenida p{
+    color:#666;
+}
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    font-size:14px;
 }
