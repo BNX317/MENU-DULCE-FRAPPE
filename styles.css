@@ -12,13 +12,13 @@ body{
 
 header{
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
+
     background:linear-gradient(
         135deg,
-        #b8ecff,
-        #ffd6ea
+        #d6f4ff,
+        #ffd9ec
     );
-    color:#4a3b4f;
 }
 
 header h1{
@@ -156,10 +156,11 @@ section h2{
     font-weight:bold;
 }
 .logo{
-    width:300px;
-    max-width:90%;
+    width:500px;
+    max-width:95%;
     display:block;
     margin:20px auto;
+    filter: drop-shadow(0 0 20px rgba(255,182,193,.6));
 
     animation: flotar 3s ease-in-out infinite;
 }
