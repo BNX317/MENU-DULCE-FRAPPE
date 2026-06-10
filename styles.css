@@ -13,8 +13,12 @@ body{
 header{
     text-align:center;
     padding:30px;
-    background:#111;
-    color:white;
+    background:linear-gradient(
+        135deg,
+        #b8ecff,
+        #ffd6ea
+    );
+    color:#4a3b4f;
 }
 
 header h1{
@@ -150,4 +154,28 @@ section h2{
     margin-top:10px;
     font-size:24px;
     font-weight:bold;
+}
+.logo{
+    width:180px;
+    max-width:80%;
+    display:block;
+    margin:0 auto 15px auto;
+}
+.categoria-menu{
+    background:white;
+    margin-bottom:15px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.categoria-menu summary{
+    padding:18px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.productos{
+    padding:15px;
 }
