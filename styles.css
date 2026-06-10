@@ -67,7 +67,6 @@ section h2{
     object-fit:contain;
 }
 
-
 .info{
     padding:15px;
 }
@@ -157,10 +156,12 @@ section h2{
     font-weight:bold;
 }
 .logo{
-    width:3000px;
-    max-width:80%;
+    width:300px;
+    max-width:90%;
     display:block;
-    margin:0 auto 15px auto;
+    margin:20px auto;
+
+    animation: flotar 3s ease-in-out infinite;
 }
 .categoria-menu{
     background:white;
@@ -179,4 +180,19 @@ section h2{
 
 .productos{
     padding:15px;
+}
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
 }
