@@ -1,640 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="theme-color" content="#ff5ca8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulce Frappe | Menú Digital</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/LOGO.png">
+
+    <title>Menú | Dulce Frappe</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f8eee3;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3d2118;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 15px 20px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        header p {
+            color: #087f8c;
+            font-size: 15px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #f8eee3;
+        }
+
+        .botones button {
+            border: none;
+            background: #087f8c;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .botones button:active {
+            transform: scale(0.96);
+        }
+
+        .menu {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding: 0 10px 30px;
+        }
+
+        .menu img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 15px 30px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-
-    <a href="#">
-    <img src="img/LOGO.png" alt="Dulce Frappe" class="logo">
-</a>
-
-    <div class="bienvenida">
-        <h2>Tu antojo favorito está aquí 💙🩷</h2>
-        <p>Frappes, hamburguesas, alitas y mucho más.</p>
-    </div>
-
+    <h1>🩵 Dulce Frappe 🩵</h1>
+    <p>Hecho con amor • Pineda</p>
 </header>
 
-
-
-<nav class="categorias">
-    <a href="#combos">Combos</a>
-    <a href="#frappes">Frappes</a>
-    <a href="#hamburguesas">Hamburguesas</a>
-    <a href="#alitas">Alitas</a>
-    <a href="#bebidas">Bebidas</a>
-    <a href="#especiales">Especiales</a>
-</nav>
-<section id="combos">
-
-    <h2>🍟 Combos</h2>
-
-    <details class="combo">
-
-        <summary>🔥SUPER COMBO🔥</summary>
-
-        <div class="combo-contenido">
-
-            <img src="img/combo1.jpg" alt="Combo 1">
-                        <p>
-                *EL FRAPPE  DE CAPPUCINO VAINILLA CHICO SOLO APLICABLE LOS DOMINGOS*
-            </p>
-            <span>$200</span>
-
-        </div>
-        
-
-    </details>
-        <details class="combo">
-
-        <summary>⭐COMBO KIDS⭐</summary>
-
-        <div class="combo-contenido">
-
-            <img src="img/combo2.jpg" alt="Combo 1">
-                        <p>INCLUYE</p>
-                        <p>•  HAMBURGUESA CHICA</p>
-                        <p>•  PAPAS CHICAS</p>
-                        <p>•  FRAPPE DE CHOCOLATE CHICO</p>
-            <span>$135</span>
-
-        </div>
-        
-
-    </details>
-<hr class="separador">
-</section>
-
-
-<section id="frappes">
-
-    <h2>🥤 Frappes</h2>
-
-    <details class="categoria-menu">
-        <summary>🍫 Chocolate y Dulces</summary>
-
-        <div class="productos">
-
-            <div class="producto">
-                <img src="img/kinderbueno.jpg">
-                <div class="info">
-                    <h3>Frappe KINDER BUENO</h3>
-                    <span>$85</span>
-                </div>
-            </div> 
-                        <div class="producto">
-                <img src="img/kitkat.jpg">
-                <div class="info">
-                    <h3>Frappe KIT-KAT</h3>
-                    <span>$65</span>
-                </div>
-            </div>  
-                        <div class="producto">
-                <img src="img/ferrero.jpg">
-                <div class="info">
-                    <h3>Frappe FERRERO ROCHER</h3>
-                    <span>$75</span>
-                </div>
-            </div>  
-                        <div class="producto">
-                <img src="img/nute.jpg">
-                <div class="info">
-                    <h3>Frappe NUTELLA</h3>
-                    <span>$65</span>
-                </div>
-            </div>              <div class="producto">
-                <img src="img/kinderchoco.jpg">
-                <div class="info">
-                    <h3>Frappe KINDER CHOCOLATE</h3>
-                    <span>$65</span>
-                </div>
-            </div> 
-                        <div class="producto">
-    <img src="img/mazapan.jpg">
-    <div class="info">
-        <h3>Frappe MAZAPAN</h3>
-        <span>$60</span>
-    </div>
+<div class="botones">
+    <button onclick="irA('frappes')">🥤 Frappés</button>
+    <button onclick="irA('comida')">🍔 Comida</button>
 </div>
 
-<div class="producto">
-    <img src="img/gansi.jpg">
-    <div class="info">
-        <h3>Frappe GANSITO</h3>
-        <span>$60</span>
-    </div>
-</div>
+<main class="menu">
 
-<div class="producto">
-    <img src="img/pingui.jpg">
-    <div class="info">
-        <h3>Frappe PINGÜINO</h3>
-        <span>$65</span>
-    </div>
-</div>
+    <img
+        id="frappes"
+        src="MENU2.jpeg"
+        alt="Menú de Frappés Dulce Frappe"
+    >
 
-<div class="producto">
-    <img src="img/oreo.jpg">
-    <div class="info">
-        <h3>Frappe OREO</h3>
-        <span>$60</span>
-    </div>
-</div>
+    <img
+        id="comida"
+        src="MENU.jpeg"
+        alt="Menú de comida Dulce Frappe"
+    >
 
-<div class="producto">
-    <img src="img/paleta.jpg">
-    <div class="info">
-        <h3>Frappe PALETA DE ALMENDRA</h3>
-        <span>$135</span>
-    </div>
-</div>
+</main>
 
-<div class="producto">
-    <img src="img/chocoabue.jpg">
-    <div class="info">
-        <h3>Frappe CHOCOLATE ABUELITA</h3>
-        <span>$60</span>
-    </div>
-</div>
-
-<div class="producto">
-    <img src="img/chocoblanco.jpg">
-    <div class="info">
-        <h3>Frappe CHOCOLATE BLANCO</h3>
-        <span>$60</span>
-    </div>
-</div>
-
-<div class="producto">
-    <img src="img/caje.jpg">
-    <div class="info">
-        <h3>Frappe CAJETA</h3>
-        <span>$60</span>
-    </div>
-</div>
-
-<div class="producto">
-    <img src="img/cara.jpg">
-    <div class="info">
-        <h3>Frappe CARAMELO</h3>
-        <span>$60</span>
-    </div>
-</div>
-  
-
-        </div>
-
-    </details>
-
-    <details class="categoria-menu">
-        <summary>☕ Café y Especiados</summary>
-
-        <div class="productos">
-                <div class="producto">
-                    <img src="img/moka.jpg">
-                    <div class="info">
-                        <h3>Frappe MOKA CAPUCHINO</h3>
-                        <span>$50</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/capuvai.jpg">
-                    <div class="info">
-                        <h3>Frappe CAPUCHINO DE VAINILLA</h3>
-                        <span>$50</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/ave.jpg">
-                    <div class="info">
-                        <h3>Frappe FRAPPUCINO DE AVELLANAS</h3>
-                        <span>$60</span>
-                    </div>
-                </div>
-                                <div class="producto">
-                    <img src="img/chai.jpg">
-                    <div class="info">
-                        <h3>Frappe CHAI DE VAINILLA</h3>
-                        <span>$60</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/bailey.jpg">
-                    <div class="info">
-                        <h3>Frappe BAILEYS</h3>
-                        <span>$75</span>
-                    </div>
-                </div> 
-                
-        </div>
-
-    </details>
-
-    <details class="categoria-menu">
-        <summary>🍓 Frutales y Cremosos</summary>
-
-        <div class="productos">
-                            <div class="producto">
-                    <img src="img/fres.jpg">
-                    <div class="info">
-                        <h3>Frappe FRESA</h3>
-                        <span>$75</span>
-                    </div>
-                </div>
-                                <div class="producto">
-                    <img src="img/fresacon.jpg">
-                    <div class="info">
-                        <h3>Frappe FRESAS CON CREMA</h3>
-                        <span>$60</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/frambuesa.jpg">
-                    <div class="info">
-                        <h3>Frappe FRAMBUESA</h3>
-                        <span>$60</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/red.jpg">
-                    <div class="info">
-                        <h3>Frappe RED VELVET</h3>
-                        <span>$60</span>
-                    </div>
-                </div> 
-                                <div class="producto">
-                    <img src="img/icy.jpg">
-                    <div class="info">
-                        <h3>Frappe ICY FRUTZ BLUEBERRY</h3>
-                        <span>$60</span>
-                    </div>
-                </div> 
-        </div>
-
-
-    <details class="categoria-menu">
-        <summary>🥭 Chamoyadas</summary>
-        <div class="productos">
-            <div class="producto">
-                <img src="img/chamoyada2.jpeg">
-                <div class="info">
-                    <h3>CHAMOYADA MANGO</h3>
-                    <span>$50</span>
-                </div>
-            </div>
-        </div>
-
-            <div class="producto">
-                <img src="img/chamoyada1.jpeg">
-                <div class="info">
-                    <h3>CHAMOYADA FRESA</h3>
-                    <span>$60</span>
-                </div>
-            </div>
-        </div>
-
-    </details>
-<hr class="separador">
-</section>
-
-
-<section id="hamburguesas">
-
-    <h2>🍔 Hamburguesas</h2>
-
-    <details class="categoria-menu">
-
-        <summary>🍔 Hamburguesas</summary>
-
-        <div class="productos">
-
-            <div class="producto">
-
-                <img src="img/arracherapapas.jpg">
-
-                <div class="info">
-                    <h3>ARRACHERA CON PAPAS</h3>
-                    <span>$125</span>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/arrachera.jpg">
-
-                <div class="info">
-                    <h3>ARRACHERA</h3>
-                    <span>$95</span>
-                </div>
-
-            </div>
-                        <div class="producto">
-
-                <img src="img/pollopapas.jpg">
-
-                <div class="info">
-                    <h3>POLLO CON PAPAS</h3>
-                    <span>$125</span>
-                </div>
-
-            </div>
-                        <div class="producto">
-
-                <img src="img/pollo.jpg">
-
-                <div class="info">
-                    <h3>POLLO</h3>
-                    <span>$95</span>
-                </div>
-            </div>
-                        <div class="producto">
-
-                <img src="img/papas.jpg">
-
-                <div class="info">
-                    <h3>ORDEN DE PAPAS</h3>
-                    <span>$45</span>
-                </div>
-            </div>
-                        <div class="producto">
-
-                <img src="img/dedos.jpg">
-
-                <div class="info">
-                    <h3>DEDOS DE QUESO 5PZ</h3>
-                    <span>$145</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </details>
-<hr class="separador">
-</section>
-
-
-<section id="alitas">
-
-    <h2>🍗 Alitas</h2>
-
-    <details class="categoria-menu">
-
-        <summary>🍗 Alitas</summary>
-
-        <div class="productos">
-
-            <div class="producto">
-
-                <img src="img/alitas.jpg">
-
-                <div class="info">
-                    <h3>ORDEN 5PZ</h3>
-                    <p>Salsa a elegir.</p>
-                    <p>-BBQ </p>
-                    <p>-MANGO HABANERO </p>
-                    <p>-BUFALO </p>
-                    <p>-BBQ PICOSAS </p>
-                    <p>-PARMESANO </p>
-                    <p>-CAJUN </p>
-                    <p>-NARANJA CHIPOTLE </p>
-                    <p>-LIMON PEPPER MAN </p>
-                    <span>$85</span>
-                </div>
-
-            </div>
-
-            <div class="producto">
-
-                <img src="img/alitas.jpg">
-
-                <div class="info">
-                    <h3>ORDEN 6PZ</h3>
-                    <p>Salsa a elegir.</p>
-                    <p>-BBQ </p>
-                    <p>-MANGO HABANERO </p>
-                    <p>-BUFALO </p>
-                    <p>-BBQ PICOSAS </p>
-                    <p>-PARMESANO </p>
-                    <p>-CAJUN </p>
-                    <p>-NARANJA CHIPOTLE </p>
-                    <p>-LIMON PEPPER MAN </p>
-                    <span>$100</span>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/alitas.jpg">
-
-                <div class="info">
-                    <h3>ORDEN 10PZ</h3>
-                    <p>Salsa a elegir.</p>
-                    <p>-BBQ </p>
-                    <p>-MANGO HABANERO </p>
-                    <p>-BUFALO </p>
-                    <p>-BBQ PICOSAS </p>
-                    <p>-PARMESANO </p>
-                    <p>-CAJUN </p>
-                    <p>-NARANJA CHIPOTLE </p>
-                    <p>-LIMON PEPPER MAN </p>
-                    <span>$160</span>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/alitas.jpg">
-
-                <div class="info">
-                    <h3>ORDEN 15PZ</h3>
-                    <p>Salsa a elegir.</p>
-                    <p>-BBQ </p>
-                    <p>-MANGO HABANERO </p>
-                    <p>-BUFALO </p>
-                    <p>-BBQ PICOSAS </p>
-                    <p>-PARMESANO </p>
-                    <p>-CAJUN </p>
-                    <p>-NARANJA CHIPOTLE </p>
-                    <p>-LIMON PEPPER MAN </p>
-                    <span>$220</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </details>
-<hr class="separador">
-</section>
-
-
-<section id="bebidas">
-
-    <h2>🥤 Bebidas</h2>
-
-    <details class="categoria-menu">
-        <summary>🍹 Bebidas Preparadas</summary>
-
-        <div class="productos">
-                        <div class="producto">
-
-                <img src="img/moji.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>MOJITO MENTA</h3>
-                   <span>$125</span>
-
-                </div>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/miche.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>MICHELADA</h3>
-                   <span>CHICA .... $60</span>
-                    <span>GRANDE .... $100</span>
-                </div>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/pitu.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>PITUFOS</h3>
-                   <span>CHICO .... $75</span>
-                    <span>GRANDE .... $125</span>
-                </div>
-                </div>
-
-            </div>
-            <div class="producto">
-
-                <img src="img/pina.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>PIÑA COLADA</h3>
-                   <span>CHICA CON ALCOHOL .... $85</span>
-                   <span>CHICA SIN ALCOHOL .... $75</span>
-                    <span>GRANDE CON ALCOHOL .... $135</span>
-                    <span>GRANDE SIN ALCOHOL .... $125</span>
-                </div>
-                </div>
-
-            </div>
-<div class="producto">
-
-    <img src="img/coro.jpg">
-
-    <div class="info">
-        <div class="precios">
-            <h3>CORONA LIGHT</h3>
-            <span>$35</span>
-
-        </div>
-
-    </div>
-</div>
-
-    </details>
-
-    <details class="categoria-menu">
-        <summary>🧃 Bebidas Refrescantes</summary>
-
-        <div class="productos">
-            <div class="producto">
-
-                <img src="img/agua.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>AGUA BONAFONT</h3>
-                   <span>LITRO .... $30</span>
-                    <span>MEDIO .... $15</span>
-                </div>
-                </div>
-
-            </div>
-             <div class="producto">
-
-                <img src="img/refre.jpg">
-
-                <div class="info">
-                    <div class="precios">
-                        <h3>REFRESCOS</h3>
-                   <span>600ML...$30</span>
-                    
-                </div>
-                </div>
-
-            </div>
-        </div>
-
-    </details>
-<hr class="separador">
-</section>
-
-
-<section id="especiales">
-
-    <h2>⭐ Especiales</h2>
-
-    <details class="categoria-menu">
-
-        <summary>⭐ Especiales</summary>
-
-        <div class="productos">
-
-            <div class="producto">
-
-                <img src="img/especial1.jpeg">
-
-                <div class="info">
-                    <h3>MINI HOTCAKES</h3>
-<div class="precios">
-    <span>15 PZ .... $75</span>
-    <span>30 PZ .... $125</span>
-</div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </details>
-<hr class="separador">
-</section>
-
-<a class="whatsapp"
-href="https://wa.me/523326798760?text=Hola,%20Mesa:%20____%0A%0AQuiero%20pedir:"
-target="_blank">
-📲 Ordenar por WhatsApp
-</a>
-<button id="volverArriba">⬆️</button>
-<script src="script.js"></script>
 <footer>
-    <p>© Dulce Frappe</p>
-    <p>Menú digital by ANDY💙</p>
-    <a href="https://wa.me/527671033923">
-        Solicita tu menú digital
-    </a>
+    Dulce Frappe • Gracias por elegirnos 🩵
 </footer>
+
+<script>
+    function irA(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+</script>
+
 </body>
 </html>
